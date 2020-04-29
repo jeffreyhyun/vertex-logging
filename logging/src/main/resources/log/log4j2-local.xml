@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="local">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[local] %style{%d{yyyy-MM-dd HH:mm:ss,SSS}}{white} %highlight{%5level} [%style{%t}{bright,blue}] %style{%C{1.}}{bright,yellow}: %msg%n%throwable"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="com.poc" level="debug"/>
+        <Logger name="com.mongodb.diagnostics" level="warn"/>
+    </Loggers>
+</Configuration>
